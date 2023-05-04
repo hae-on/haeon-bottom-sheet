@@ -6,25 +6,30 @@ Bottom Sheet 컴포넌트를 사용할 수 있는 `Bottom Sheet`와
 
 Bottom Sheet를 여닫을 수 있는 custom hook `useBottomSheet`가 있습니다.
 
+<br />
+
 ## 설치 방법
 
 ```js
 npm install 'hae-on-bottom-sheet'
 yarn add 'hae-on-bottom-sheet'
-
 ```
+
+<br />
 
 ## 사용 방법
 
-### Bottom Sheet
+## 😎 Bottom Sheet
 
-1. Bottom Sheet 컴포넌트 불러오기
+### Bottom Sheet 컴포넌트 불러오기
 
 ```js
 import { BottomSheet } from 'hae-on-bottom-sheet';
 ```
 
-2. Bottom Sheet 컴포넌트 사용하기
+<br />
+
+### Bottom Sheet 컴포넌트 사용하기
 
 해당 컴포넌트는 children(React Element)을 받아서 사용합니다.
 
@@ -50,26 +55,34 @@ const Example = ({ onClose }: ExampleProps) => {
 export default Example;
 ```
 
-### useBottomSheet
+<br />
+ 
+## 😎 useBottomSheet
 
-1. useBottomSheet custom hook 불러오기
+### useBottomSheet custom hook 불러오기
 
 ```js
 import { useBottomSheet } from 'hae-on-bottom-sheet';
 ```
 
-2. useBottomSheet custom hook 사용하기
+### useBottomSheet custom hook 사용하기
 
 ```js
 const { isBottomSheetOpen, handleBottomSheetOpen, handleBottomSheetClose } =
   useBottomSheet();
 ```
 
+<br />
+
 ### isBottomSheetOpen
+
+<br />
 
 해당 bottom sheet의 여닫는 상태입니다.
 
 isBottomSheetOpen의 상태에 따라 뒤에 오는 컴포넌트의 렌더링 여부가 결정됩니다.
+
+<br />
 
 예시)
 
@@ -81,9 +94,13 @@ isBottomSheetOpen의 상태에 따라 뒤에 오는 컴포넌트의 렌더링 �
 
 ### handleBottomSheetOpen
 
+<br />
+
 bottom sheet를 열 수 있습니다.
 
 props로 전달하여 사용할 수 있습니다.
+
+<br />
 
 예시)
 
@@ -93,15 +110,21 @@ props로 전달하여 사용할 수 있습니다.
 <CardItem card={card} onOpen={handleBottomSheetOpen} />
 
 //CardItem.tsx
-// BankChangeBtn이 클릭되면 BottomSheet가 열립니다.
+// BankChangeBtn이 클릭되면 Bottom Sheet가 열립니다.
 <BankChangeBtn onClick={onOpen}>{card.bankName}</BankChangeBtn>
 ```
 
+<br />
+
 ### handleBottomSheetClose
+
+<br />
 
 bottom sheet를 닫을 수 있습니다.
 
 props로 전달하여 사용할 수 있습니다.
+
+<br />
 
 예시)
 
@@ -111,6 +134,14 @@ props로 전달하여 사용할 수 있습니다.
 <CardItem card={card} onClose={handleBottomSheetClose} />
 
 //CardItem.tsx
-// BankChangeBtn이 클릭되면 BottomSheet가 닫힙니다.
+// BankChangeBtn이 클릭되면 Bottom Sheet가 닫힙니다.
 <BankChangeBtn onClick={onClose}>{card.bankName}</BankChangeBtn>
 ```
+
+<br />
+
+### ESC & Back Drop
+
+<br />
+
+해당 Bottom Sheet는 ESC 키를 누르거나 Back Drop 클릭으로 닫을 수 있습니다.
